@@ -27,6 +27,8 @@ const options = [
   }
 ];
 
+const materials = ['wood', 'metal', 'glass', 'cotton', 'polyester', 'silk', 'stone', 'gold', 'silver', 'diamond'];
+
 const description = [
   'Lorem ipsum dolor sit amet, vim at viderer lobortis, eos ubique interesset suscipiantur in. In est omnis disputando, at vis utinam hendrerit eloquentiam. At utroque persequeris vix. Ne ignota semper iriure qui, modus gloriatur abhorreant ei usu',
   'Id eos odio diam nonumy, pro at vero minimum commune. Vim ei essent aliquid oportere, te dicunt aeterno corrumpit cum, sint gloriatur usu ea. Decore periculis complectitur eu per, mel eripuit mediocritatem eu, eos at latine volumus reformidans. At purto oportere cum.',
@@ -66,8 +68,30 @@ function generateRandomMember(array) {
 };
 
 function generateRandomNumber(max) {
-  return Math.floor(Math.random() * Math.floor(max));
+  return Math.floor(Math.random() * Math.floor(max)) || 1;
 };
+
+function generateHighlights() {
+  let thishandMade = Math.random() < 0.5;
+  let thisMaterials = [];
+  for (let i = 0; i < generateRandomNumber(3); i++){
+    let x = generateRandomMember(materials);
+    if (!thisMaterials.includes(x)) {
+      thisMaterials.push(x);
+    }
+  }
+  let height = generateRandomNumber(100);
+  let width = generateRandomNumber(100);
+  let depth = generateRandomNumber(100);
+
+  return JSON.stringify({
+    isHandmade : thishandMade,
+    materials : thisMaterials,
+    height : height,
+    width : width,
+    depth: depth
+  });
+}
 
 const seedDatabase = function() {
   for (let i = 0; i < numberOfEntries; i++) {
@@ -84,8 +108,9 @@ const seedDatabase = function() {
       averageRating: generateRandomNumber(5),
       options: generateOptions(),
       totalSales: generateRandomNumber(100),
-      stockLeft: generateRandomNumber(100),
+      stockLeft: generateRandomNumber(20),
       itemDescription: generateRandomMember(description),
+      itemHighlights: generateHighlights(),
       shipTime: generateRandomNumber(30),
       deliveryTime: generateRandomNumber(30)
     });

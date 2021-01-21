@@ -17,6 +17,7 @@ const descriptionSchema = new mongoose.Schema({
   totalSales: Number,
   stockLeft: Number,
   itemDescription: String,
+  itemHighlights: String,
   shipTime: Number,
   deliveryTime: Number
 });

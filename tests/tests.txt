@@ -1,0 +1,5 @@
+testing will include:
+
+-- making sure data shape from server matches expectations
+-- appropriate data is sent back from client when user submits forms
+-- input verification on data sent back from client

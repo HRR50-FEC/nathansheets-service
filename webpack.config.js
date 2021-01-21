@@ -5,8 +5,11 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: path.join(__dirname, 'client', 'index.js'),
-  plugins: [new webpack.ProgressPlugin()],
+  entry: './client/index.jsx',
+  output: {
+    filename: 'bundle.js',
+    path: path.join(__dirname, '/dist')
+  },
 
   module: {
     rules: [{
@@ -14,23 +17,5 @@ module.exports = {
       include: [path.resolve(__dirname, 'client')],
       loader: 'babel-loader'
     }]
-  },
-
-  optimization: {
-    minimizer: [new TerserPlugin()],
-
-    splitChunks: {
-      cacheGroups: {
-        vendors: {
-          priority: -10,
-          test: /[\\/]node_modules[\\/]/
-        }
-      },
-
-      chunks: 'async',
-      minChunks: 1,
-      minSize: 30000,
-      name: false
-    }
   }
 }
