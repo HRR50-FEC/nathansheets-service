@@ -27,7 +27,7 @@ const options = [
   }
 ];
 
-const materials = ['wood', 'metal', 'glass', 'cotton', 'polyester', 'silk', 'stone', 'gold', 'silver', 'diamond'];
+const materials = ['Wood', 'Metal', 'Glass', 'Cotton', 'Polyester', 'Silk', 'Stone', 'Gold', 'Silver', 'Diamond'];
 
 const description = [
   'Lorem ipsum dolor sit amet, vim at viderer lobortis, eos ubique interesset suscipiantur in. In est omnis disputando, at vis utinam hendrerit eloquentiam. At utroque persequeris vix. Ne ignota semper iriure qui, modus gloriatur abhorreant ei usu',
@@ -87,9 +87,11 @@ function generateHighlights() {
   return JSON.stringify({
     isHandmade : thishandMade,
     materials : thisMaterials,
-    height : height,
-    width : width,
-    depth: depth
+    dimensions : {
+      height: height,
+      width: width,
+      depth: depth
+    },
   });
 }
 
@@ -107,7 +109,7 @@ const seedDatabase = function() {
       discountPercent: generateRandomMember(discount),
       averageRating: generateRandomNumber(5),
       options: generateOptions(),
-      totalSales: generateRandomNumber(100),
+      totalSales: generateRandomNumber(10000),
       stockLeft: generateRandomNumber(20),
       itemDescription: generateRandomMember(description),
       itemHighlights: generateHighlights(),

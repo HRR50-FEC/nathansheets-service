@@ -10,7 +10,7 @@ class ProductInfo extends React.Component {
   render() {
     return(
       <div>
-        <ProductHighlights hightlights={this.props.listing.itemHighlights}/>
+        <ProductHighlights highlights={this.props.listing.itemHighlights}/>
         <ProductDescription description={this.props.listing.itemDescription}/>
       </div>
     );

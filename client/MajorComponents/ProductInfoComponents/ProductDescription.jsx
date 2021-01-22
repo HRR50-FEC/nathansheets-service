@@ -2,7 +2,14 @@ import React from 'react';
 
 function ProductDescription(props) {
   return (
-    <div>{props.description}</div>
+    <div id="descriptionContainer">
+      <div id="descriptionTitle">
+        Description
+      </div>
+      <div id="description">
+        {props.description}
+      </div>
+    </div>
   );
 }
 

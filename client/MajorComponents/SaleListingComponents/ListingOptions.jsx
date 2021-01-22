@@ -32,6 +32,7 @@ class ListingOptions extends React.Component {
         // console.log(inputs);
         output.push(
           <div className="optionDropdownContainer" key={x.name}>
+            <label>{x.name}</label>
               <select name={x.name} key={x.name} className="optionDropdown">
               {inputs.map(xx =>
                 <option value={xx} onChange={this.handleChange.bind(this)} key={xx}>{xx}</option>

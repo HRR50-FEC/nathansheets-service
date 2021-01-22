@@ -10,7 +10,8 @@ class SaleListing extends React.Component {
   renderItemSeller() {
     if (this.props.listing.ItemSeller) {
       return(
-        < ListingSeller ItemSeller={this.props.listing.ItemSeller} averageRating={this.props.listing.averageRating} totalSales={this.props.listing.totalSales}/>
+        < ListingSeller ItemSeller={this.props.listing.ItemSeller} averageRating={this.props.listing.averageRating}
+        totalSales={this.props.listing.totalSales}/>
       );
     }
   }

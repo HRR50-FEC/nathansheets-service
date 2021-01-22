@@ -11,10 +11,10 @@ function ListingSeller(props) {
   return (
     <div id="ListingSellerContainer">
       <div id="ListingSeller">
-        {props.ItemSeller.sellerName}
+        <a id="sellerLink" href="">{props.ItemSeller.sellerName}</a>
       </div>
       <div id="ListingSellerSales">
-          {props.totalSales} sales | {generateStars(props.averageRating)}
+          {props.totalSales} sales | <a href="">{generateStars(props.averageRating)}</a>
         </div>
     </div>
   );
