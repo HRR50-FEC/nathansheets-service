@@ -12,7 +12,7 @@ const shops = ['Target', 'Walmart', 'GameStop', 'Nvidia', 'Intel', 'Kohls', 'McD
 const discount = [0, 0, 0, 0, 0, 0, 0, 0.1, 0.15, 0.2, 0.25, 0.3, 0.5];
 const options = [
   {
-    name: 'Colors',
+    name: 'Color',
     0: 'blue',
     1: 'red',
     2: 'green',
@@ -72,7 +72,7 @@ function generateRandomNumber(max) {
 };
 
 function generateHighlights() {
-  let thishandMade = Math.random() < 0.5;
+  let thishandMade = Math.random() < 0.75;
   let thisMaterials = [];
   for (let i = 0; i < generateRandomNumber(3); i++){
     let x = generateRandomMember(materials);

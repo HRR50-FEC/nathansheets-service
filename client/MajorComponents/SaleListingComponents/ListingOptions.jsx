@@ -34,6 +34,7 @@ class ListingOptions extends React.Component {
           <div className="optionDropdownContainer" key={x.name}>
             <label>{x.name}</label>
               <select name={x.name} key={x.name} className="optionDropdown">
+                <option onChange={this.handleChange.bind(this)} key='default'>Select a {x.name}</option>
               {inputs.map(xx =>
                 <option value={xx} onChange={this.handleChange.bind(this)} key={xx}>{xx}</option>
               )}
@@ -67,6 +68,10 @@ class ListingOptions extends React.Component {
         </div>
         <div id="lowStockIconContainer">
           {this.renderLowStockIcon(this.props.stockLeft)}
+        </div>
+        <div id="giftWrapContainer">
+          <img id="giftWrapIcon" src="https://fecuiicons.s3.amazonaws.com/ezgif.com-gif-maker+(1).gif"></img>
+          <b>Gift wrapping available.</b> <a id="giftWrapDetails">See details</a>
         </div>
       </div>
     );

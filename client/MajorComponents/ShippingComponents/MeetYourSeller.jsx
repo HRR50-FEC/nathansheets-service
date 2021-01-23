@@ -3,7 +3,7 @@ import React from 'react';
 function MeetYourSeller(props) {
   return (
     <div id="MeetYourSellerContainer">
-      <div id="ListingSeller">
+      {/* <div id="ListingSeller">
         seller name: {props.ItemSeller.sellerName}
       </div>
       <div id="ListingSellerSales">
@@ -11,7 +11,7 @@ function MeetYourSeller(props) {
       </div>
       <div id="ListingAverageRating">
         average rating: {props.averageRating}
-      </div>
+      </div> */}
     </div>
   );
 }

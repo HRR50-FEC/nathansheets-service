@@ -41,10 +41,11 @@ function ProductHighlights(props) {
 
   return (
     <div id="highlightsContainer">
-      <div id="highlightsTitle">
+      <div className='descriptionHeader' onClick={props.toggle.bind(null, 'highlights')}>
         Highlights
+        <img className={props.arrow} src="https://fecuiicons.s3.amazonaws.com/arrow-up-01-512.webp"></img>
       </div>
-      <div id="highlights">
+      <div className={props.cName} id="highlights">
         {renderHighlights()}
       </div>
     </div>
