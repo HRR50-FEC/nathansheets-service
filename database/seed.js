@@ -12,7 +12,7 @@ const shops = ['Target', 'Walmart', 'GameStop', 'Nvidia', 'Intel', 'Kohls', 'McD
 const discount = [0, 0, 0, 0, 0, 0, 0, 0.1, 0.15, 0.2, 0.25, 0.3, 0.5];
 const options = [
   {
-    name: 'Colors',
+    name: 'Color',
     0: 'blue',
     1: 'red',
     2: 'green',
@@ -26,6 +26,8 @@ const options = [
     3: 'extra large'
   }
 ];
+
+const materials = ['Wood', 'Metal', 'Glass', 'Cotton', 'Polyester', 'Silk', 'Stone', 'Gold', 'Silver', 'Diamond'];
 
 const description = [
   'Lorem ipsum dolor sit amet, vim at viderer lobortis, eos ubique interesset suscipiantur in. In est omnis disputando, at vis utinam hendrerit eloquentiam. At utroque persequeris vix. Ne ignota semper iriure qui, modus gloriatur abhorreant ei usu',
@@ -66,8 +68,32 @@ function generateRandomMember(array) {
 };
 
 function generateRandomNumber(max) {
-  return Math.floor(Math.random() * Math.floor(max));
+  return Math.floor(Math.random() * Math.floor(max)) || 1;
 };
+
+function generateHighlights() {
+  let thishandMade = Math.random() < 0.75;
+  let thisMaterials = [];
+  for (let i = 0; i < generateRandomNumber(3); i++){
+    let x = generateRandomMember(materials);
+    if (!thisMaterials.includes(x)) {
+      thisMaterials.push(x);
+    }
+  }
+  let height = generateRandomNumber(100);
+  let width = generateRandomNumber(100);
+  let depth = generateRandomNumber(100);
+
+  return JSON.stringify({
+    isHandmade : thishandMade,
+    materials : thisMaterials,
+    dimensions : {
+      height: height,
+      width: width,
+      depth: depth
+    },
+  });
+}
 
 const seedDatabase = function() {
   for (let i = 0; i < numberOfEntries; i++) {
@@ -83,9 +109,10 @@ const seedDatabase = function() {
       discountPercent: generateRandomMember(discount),
       averageRating: generateRandomNumber(5),
       options: generateOptions(),
-      totalSales: generateRandomNumber(100),
-      stockLeft: generateRandomNumber(100),
+      totalSales: generateRandomNumber(10000),
+      stockLeft: generateRandomNumber(20),
       itemDescription: generateRandomMember(description),
+      itemHighlights: generateHighlights(),
       shipTime: generateRandomNumber(30),
       deliveryTime: generateRandomNumber(30)
     });
