@@ -1,0 +1,360 @@
+@import url(//db.onlinewebfonts.com/c/9f267d7e77d5e399f5d28fa7985f8235?family=Guardian+Egyp+Regular);
+
+#ListingSeller {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+#ListingSellerSales {
+  font-weight: lighter;
+  font-size: 10pt;
+}
+
+#ListingAverageRating {
+  display: flex;
+}
+
+#sellerLink:link {
+  text-decoration: none;
+}
+
+#sellerLink:hover {
+  text-decoration: underline;
+}
+
+.stars {
+  width:12px;
+  margin-left: 2px;
+  padding-top: 2px;
+  -webkit-user-select: none;
+}
+
+#ListingItemName {
+  font-size: 22pt;
+  font-weight: 100;
+  margin: 10px 0px 10px 0px;
+}
+
+#ListingItemPrice {
+  font-size: 22pt;
+  font-weight: 600;
+  margin: 10px 0px 20px 0px;
+}
+
+#ListingStockLeft {
+  color: #a70101;
+  font-weight: 600;
+  font-size: small;
+  text-align: right;
+  margin: 25px 0px 10px auto;
+}
+
+.optionDropdown {
+  outline: none;
+  padding: 12px;
+  border-radius: 10px;
+  border-color: #dbdbdb;
+  border-style: solid;
+  border-width: 1px;
+  background-color: white;
+  width: 100%;
+  font-size: 12pt;
+  color: #2e2e2e;
+  box-shadow: -1px -1px 2px #e6e6e6, 1px 1px 2px #e6e6e6;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.optionDropdown:hover {
+  cursor: pointer;
+  box-shadow: -2px -2px 5px lightgray, 2px 2px 5px lightgray;
+  border-color: #8f8f8f;
+}
+
+.optionDropdownContainer {
+  margin-bottom: 15px;
+}
+
+#addToCartContainer {
+  text-align: center;
+  height: 60px;
+  margin: 20px 0px 0px 0px;
+  vertical-align: middle;
+}
+
+#addToCartButton {
+  outline: none;
+  background-color: #222222;
+  color: white;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  border-style: none;
+  font-size: large;
+  font-weight: 600;
+  text-align: center;
+  transition: width 0.1s, height 0.1s, margin-left 0.1s,
+              margin-top 0.1s, background-color 0.1s;
+}
+
+#addToCartButton:hover {
+  width: 102%;
+  height: 54px;
+  margin-left: -1%;
+  margin-top: -2px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #2b2b2b;
+}
+
+#lowStockIcon {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+#lowStockIconContainer {
+  font-size: 10pt;
+  font-weight: 300;
+  vertical-align: middle;
+}
+
+#giftWrapIcon {
+  width: 60px;
+  margin: -5px -5px 0px -5px;
+  vertical-align: middle;
+}
+
+#giftWrapContainer {
+  font-size: 10pt;
+  vertical-align: middle;
+}
+
+#giftWrapDetails {
+  border-bottom: dotted 2px;
+  cursor: help;
+}
+
+#PriceContainer {
+  display: flex;
+}
+
+#klarnaFinancing {
+  font-size: 10pt;
+  margin-bottom: 20px;
+}
+
+@keyframes collapse {
+  from {max-height: 1000px;}
+  to {max-height: 0px;}
+}
+
+@keyframes expand {
+  from {max-height: 0px;}
+  to {max-height: 1000px;}
+}
+
+.collapsed {
+  animation-name: collapse;
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0,.93,0,.81);
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.notCollapsed {
+  animation-name: expand;
+  animation-timing-function: ease-in;
+  animation-duration: 0.4s;
+  max-height: none;
+  overflow: hidden;
+}
+
+@keyframes flip {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes flipBack {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.arrowNotFlipped {
+  width: 15px;
+  float: right;
+  animation-name: flipBack;
+  animation-timing-function: linear;
+  animation-duration: 0.25s;
+}
+
+.arrowFlipped {
+  width: 15px;
+  float: right;
+  animation-name: flip;
+  animation-timing-function: linear;
+  animation-duration: 0.25s;
+  transform: rotate(180deg);
+}
+
+#highlightsContainer {
+  width: auto;
+  margin-top: 30px;
+}
+
+.descriptionHeader {
+  padding: 15px 0px 7px 0px;
+  margin: 23px 5px 18px 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  border-style: none;
+  border-radius: 35px;
+  font-size: 12pt;
+  font-weight: 600;
+  background-color: white;
+  transition: background-color 0.1s, padding 0.15s, margin 0.15s;
+}
+
+.descriptionHeader:hover {
+  padding: 15px 15px 15px 15px;
+  margin: 13px -10px 10px -10px;
+  background-color: #eeeeee;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: 1fr 12fr;
+  margin-top: 3px;
+  font-weight: 500;
+}
+
+.highlightIcon {
+  width: 15px;
+  height: auto;
+  margin: 3px 5px 5px 5px;
+  vertical-align: middle;
+  column-width: 20px;
+  grid-column: 1;
+}
+
+.highlightText {
+  grid-column: 2;
+  margin: 2px;
+  margin-top: 3px;
+  font-size: 12pt;
+  font-weight: 100;
+}
+
+#handmadeContainer {
+  vertical-align: middle;
+}
+
+#descriptionContainer {
+  width: auto;
+  margin-top: 30px;
+}
+
+#description {
+  margin: 0px;
+  font-size: 12pt;
+  font-weight: 100;
+}
+
+#shippingContainer {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+#estimatedArrivalLabel {
+  border-bottom: 1px dashed black;
+  color: darkgray;
+  width: 115px;
+  font-size: 10pt;
+}
+
+#estimatedArrival {
+  font-size: 18pt;
+  margin: 5px 0px 5px 0px;
+}
+
+.etaGraphic {
+  margin: 10px 0px 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  cursor: help;
+}
+
+.etaIcons {
+  width: 15px;
+  height: auto;
+  margin: 5px;
+  padding: 6px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 15px;
+  -webkit-user-select: none;
+}
+
+.etaGraphicDates {
+  text-align: center;
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+.etaGraphicText {
+  border-bottom: 1px dashed black;
+  text-align: center;
+  font-size: 10pt;
+  font-weight: 500;
+  cursor: help;
+}
+
+.etaGraphicLinks {
+  cursor: help;
+}
+
+.line {
+  border: rgb(224, 224, 224);
+  width: 120px;
+  height: 0px;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 17px;
+}
+
+#descriptionBar {
+  margin: 10px;
+  width: 350px;
+}
+
+body {
+  font-family: "Guardian Egyp Regular", Georgia, 'Noto Serif TC', serif;
+  line-height: 1.45;
+  letter-spacing: 0.055em;
+}
+
+a {
+  color: black;
+  text-decoration-line: none;
+}
+
+h2 {
+  font-weight: lighter;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 5px;
+  font-size: 10pt;
+}
