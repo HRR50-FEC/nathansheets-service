@@ -264,7 +264,6 @@
 }
 
 #description {
-  margin: 0px;
   font-size: 12pt;
   font-weight: 100;
 }
@@ -272,6 +271,10 @@
 #shippingContainer {
   margin-bottom: 30px;
   margin-top: 30px;
+}
+
+#shipping {
+  margin: 0px;
 }
 
 #estimatedArrivalLabel {
