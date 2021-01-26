@@ -1,9 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 const path = require('path');
 const db = require(path.resolve('database', 'index.js'));
+
+app.use(cors({
+  origin: 'http://localhost:9001'
+}));
+app.use('/main', express.static('dist/bundle.js'));
+app.use('/css', express.static('dist/styles.css'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));

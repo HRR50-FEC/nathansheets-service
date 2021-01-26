@@ -3,7 +3,6 @@ import axios from 'axios';
 
 import SaleListing from './MajorComponents/SaleListing.jsx';
 import ProductInfo from './MajorComponents/ProductInfo.jsx';
-import ShippingInfo from './MajorComponents/ShippingInfo.jsx';
 
 class App extends React.Component {
   constructor (props) {
@@ -29,7 +28,6 @@ class App extends React.Component {
       <div id="descriptionBar">
         < SaleListing listing={this.state.listing}/>
         < ProductInfo listing={this.state.listing}/>
-        < ShippingInfo listing={this.state.listing}/>
       </div>
     );
   };

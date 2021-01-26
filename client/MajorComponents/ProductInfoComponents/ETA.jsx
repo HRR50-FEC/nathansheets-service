@@ -22,11 +22,11 @@ function ETA(props) {
 
   return (
     <div id="shippingContainer">
-      <div className="descriptionHeader" onClick={props.toggle}>
+      <div className="descriptionHeader" onClick={props.toggle.bind(null, 'shipping')}>
         Shipping and return policies
         <img className={props.arrow} src="https://fecuiicons.s3.amazonaws.com/arrow-up-01-512.webp"></img>
       </div>
-      <div className={props.cName}>
+      <div className={props.cName} id="shipping">
         <div id="estimatedArrivalLabel">
           <a href="">Estimated arrival</a>
         </div>
