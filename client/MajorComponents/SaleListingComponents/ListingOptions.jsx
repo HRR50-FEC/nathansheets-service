@@ -57,6 +57,12 @@ class ListingOptions extends React.Component {
     }
   }
 
+  getSellerName() {
+    if (this.props.ItemSeller) {
+      return this.props.ItemSeller.sellerName;
+    }
+  }
+
   render() {
     return (
       <div>
@@ -72,6 +78,7 @@ class ListingOptions extends React.Component {
         <div id="giftWrapContainer">
           <img id="giftWrapIcon" src="https://fecuiicons.s3.amazonaws.com/ezgif.com-gif-maker+(1).gif"></img>
           <b>Gift wrapping available.</b> <a id="giftWrapDetails">See details</a>
+          <div id="giftWrapPopup" className="popup">Gift wrapping by {this.getSellerName()}</div>
         </div>
       </div>
     );

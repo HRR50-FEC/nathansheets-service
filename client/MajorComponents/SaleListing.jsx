@@ -20,7 +20,7 @@ class SaleListing extends React.Component {
     return(
       <div>
         {this.renderItemSeller()}
-        < ListingFinancial itemPrice={this.props.listing.itemPrice} stockLeft={this.props.listing.stockLeft} options={this.props.listing.options} itemName={this.props.listing.itemName}/>
+        < ListingFinancial itemPrice={this.props.listing.itemPrice} stockLeft={this.props.listing.stockLeft} options={this.props.listing.options} itemName={this.props.listing.itemName} ItemSeller={this.props.listing.ItemSeller}/>
       </div>
     );
   };

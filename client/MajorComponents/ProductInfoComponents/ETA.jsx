@@ -28,7 +28,12 @@ function ETA(props) {
       </div>
       <div className={props.cName} id="shipping">
         <div id="estimatedArrivalLabel">
-          <a href="">Estimated arrival</a>
+          <a id="estimatedArrivalText" href="">Estimated arrival</a>
+          <div id="etaPopup" className="popup">
+            The estimated delivery date is based on your purchase date, the recipient's location (actual or inferred), the seller's processing time and location, and the shipping carrier.
+            <br></br><br></br>
+            Other factors—such as shipping carrier delays or placing an order on weekend/holiday—may push the arrival of your item beyond this date.
+          </div>
         </div>
         <div id="estimatedArrival">
           {getDeliveryDateRange()}
@@ -54,13 +59,16 @@ function ETA(props) {
           </div>
           <div className="etaGraphic">
             <div className="etaGraphicText">
-              <a className="etaGraphicLinks" href="">Order placed</a>
+              <a className="etaGraphicLinks" id="orderPlaced" href="">Order placed</a>
+              <div id="orderPlacedPopup" className="popup">After you place your order it will take {props.shipTime - 2}-{props.shipTime + 2} days to be shipped.</div>
             </div>
             <div className="etaGraphicText">
-              <a className="etaGraphicLinks" href="">Order ships</a>
+              <a className="etaGraphicLinks" id="orderShips" href="">Order ships</a>
+              <div id="orderShipsPopup" className="popup">Your order is put in the mail.</div>
             </div>
             <div className="etaGraphicText">
-              <a className="etaGraphicLinks" href="">Delivered!</a>
+              <a className="etaGraphicLinks" id="orderDelivered" href="">Delivered!</a>
+              <div id="orderDeliveredPopup" className="popup">Estimated to arrive at your doorstep {getTodayFormatted(props.shipTime + props.deliveryTime)}!</div>
             </div>
           </div>
         </div>

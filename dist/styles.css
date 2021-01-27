@@ -78,7 +78,7 @@
 #addToCartContainer {
   text-align: center;
   height: 60px;
-  margin: 20px 0px 0px 0px;
+  margin: 40px 0px 0px 0px;
   vertical-align: middle;
 }
 
@@ -133,6 +133,52 @@
 #giftWrapDetails {
   border-bottom: dotted 2px;
   cursor: help;
+}
+
+@keyframes popupAppear {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    box-shadow: 1px 1px 15px lightgray, -1px -1px 15px lightgray;
+  }
+}
+
+@keyframes popupDisappear {
+  from {
+    opacity: inherit;
+    box-shadow: inherit;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+
+#giftWrapDetails:hover + #giftWrapPopup {
+  animation-name: popupAppear;
+  animation-duration: 0.2s;
+  opacity: 100%;
+}
+
+#giftWrapPopup {
+  animation-name: popupDisappear;
+  animation-duration: 0.2s;
+  opacity: 0%;
+  box-shadow: 1px 1px 15px lightgray, -1px -1px 15px lightgray;
+  text-align: center;
+  position: absolute;
+  height: auto;
+  width: 150px;
+  border: 1px solid lightgray;
+  background-color: white;
+  z-index: 1000;
+  border-radius: 15px;
+  margin-left: 150px;
+  margin-top: 0px;
+  padding: 20px;
+  font-weight: 500;
+  font-size: 10pt;
 }
 
 #PriceContainer {
@@ -324,6 +370,57 @@
 
 .etaGraphicLinks {
   cursor: help;
+}
+
+#orderDelivered:hover + #orderDeliveredPopup {
+  animation-name: popupAppear;
+  animation-duration: 0.2s;
+  opacity: 100%;
+}
+
+#orderShips:hover + #orderShipsPopup {
+  animation-name: popupAppear;
+  animation-duration: 0.2s;
+  opacity: 100%;
+}
+
+#orderPlaced:hover + #orderPlacedPopup {
+  animation-name: popupAppear;
+  animation-duration: 0.2s;
+  opacity: 100%;
+}
+
+#estimatedArrivalText:hover + #etaPopup {
+  animation-name: popupAppear;
+  animation-duration: 0.2s;
+  opacity: 100%;
+}
+
+#etaPopup {
+  width: 250px;
+  margin-left: -300px;
+  margin-top: -25px;
+}
+
+.popup {
+  pointer-events: none;
+  animation-name: popupDisappear;
+  animation-duration: 0.2s;
+  opacity: 0%;
+  box-shadow: 1px 1px 15px lightgray, -1px -1px 15px lightgray;
+  text-align: center;
+  position: absolute;
+  height: auto;
+  width: 150px;
+  border: 1px solid lightgray;
+  background-color: white;
+  color: rgb(34, 34, 34);
+  margin: 15px 0px 0px -60px;
+  z-index: 1000;
+  border-radius: 15px;
+  padding: 20px;
+  font-weight: 500;
+  font-size: 10pt;
 }
 
 .line {
