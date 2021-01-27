@@ -25,7 +25,7 @@ function ListingFinancial(props) {
         <u><a href="">See if you're prequalified.</a></u>
       </div>
       <div id="ListingOptions">
-        <ListingOptions options={props.options} stockLeft={props.stockLeft}/>
+        <ListingOptions options={props.options} stockLeft={props.stockLeft} ItemSeller={props.ItemSeller}/>
       </div>
     </div>
   );
