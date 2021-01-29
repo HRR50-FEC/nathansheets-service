@@ -14,7 +14,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    axios.get('http://localhost:3000/listing')
+    axios.get('http://ec2-54-85-157-222.compute-1.amazonaws.com:3000/listing')
     .then (x => {
       console.log(x);
       this.setState({
