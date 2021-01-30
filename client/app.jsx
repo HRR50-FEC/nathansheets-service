@@ -14,9 +14,8 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    axios.get('http://localhost:3000/listing')
+    axios.get('/listing')
     .then (x => {
-      console.log(x);
       this.setState({
         listing: x.data
       });
