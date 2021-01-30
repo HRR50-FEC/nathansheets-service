@@ -76,7 +76,7 @@ class ListingOptions extends React.Component {
           {this.renderLowStockIcon(this.props.stockLeft)}
         </div>
         <div id="giftWrapContainer">
-          <img id="giftWrapIcon" src="https://fecuiicons.s3.amazonaws.com/ezgif.com-gif-maker+(1).gif"></img>
+          <img id="giftWrapIcon" src="https://fecuiicons.s3.amazonaws.com/ezgif.com-gif-maker+(2).gif"></img>
           <b>Gift wrapping available.</b> <a id="giftWrapDetails">See details</a>
           <div id="giftWrapPopup" className="popup">Gift wrapping by {this.getSellerName()}</div>
         </div>
