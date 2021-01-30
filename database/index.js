@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoUri = 'mongodb://admin:password@localhost/description?authSource=admin';
+const mongoUri = 'mongodb://localhost/description';
 const db = mongoose.connect(mongoUri);
 const Description = require('./description.js');
 
