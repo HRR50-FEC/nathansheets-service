@@ -8,10 +8,7 @@ app.use(compression());
 const path = require('path');
 const db = require(path.resolve('database', 'index.js'));
 
-app.use(cors({
-  origin: 'http://localhost:9001',
-  origin: 'http://ec2-54-85-157-222.compute-1.amazonaws.com:9001'
-}));
+app.use(cors());
 app.use('/main', express.static('dist/bundle.js'));
 app.use('/css', express.static('dist/styles.css'));
 
